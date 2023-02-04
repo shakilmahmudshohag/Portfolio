@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0dae760ff5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="img/logo.jpg" class="logo">
+          <ul>
+            <li>
+              <a href="#header">Home</a>
+              <a href="#About">About</a>
+              <a href="#gallary">Gallery</a>
+              <a href="#contact">Contact</a>
+
+            </li>
+          </ul>
+        </nav>
+        <div class="header-text"></div>
+        <p>UI UX Desinger</p>
+        <h1>Hi I'am Md Shakil Mahmud Shohag</h1>
+      </div>
+
+    </div>
+
+    <div id="About">
+      <div class="contrainer">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/user2.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-tittle">About Me</h1>
+            <p>I am a person who is positive about every aspect of life. <br>There are many things I like to do, to see, and to experience. </p>
+           
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links"onclick="opentab('experience')">Experience</p>
+              <p class="tab-links"onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI?UX</span><br>Designing web/app interfaces</li>
+                <li><span>Web Development</span><br>Web App Development</li>
+                <li><span>App Development</span><br>Building Android/ios apps</li>
+                <li><span>2020-current</span><br>UI/Ux design training at neso academy</li>
+                <li><span>2024</span><br>CSE from Diu</li>
+                <li><span>2019</span><br>HSC from Adamjee cantonment College</li>
+                <li><span>2017</span><br>Amjadia academy</li>
+              </ul>
+              <a href="https://drive.google.com/file/d/19yRNDl1lML9xvgzkvJMrEuGsGOsDwjZA/view?usp=sharing" class="btn">CV</a>
+            </div>
+
+            <div class="tab-contents"id="experience">
+              <ul>
+                <li><span>2020-current</span><br>UI/Ux design training at neso academy</li>
+                
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2024</span><br>CSE from Diu</li>
+                <li><span>2019</span><br>HSC from Adamjee cantonment College</li>
+                <li><span>2017</span><br>Amjadia academy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---Gallary-->
+    <div id="gallary">
+      <div class="contrainer">
+        <h1 class="sub-tittle">My Gallary</h1>
+        <div class ="work-list">
+          <div class="work-list">
+            <div class="work">
+              <img src="img/work1.png" >
+              <div class="layer">
+                <h3>Social Media App Bilbo</h3>
+                <p>AAAAAAAAA</p>
+              </div>
+            </div>
+
+            <div class="work">
+              <img src="img/work2.png" >
+              <div class="layer">
+                <h3>Social Media App</h3>
+                <p>BBBBBB</p>
+              </div>
+            </div>
+
+            <div class="work">
+              <img src="img/work1.png" >
+              <div class="layer">
+                <h3>Social Media App</h3>
+                <p>CCCCCC</p>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+        <!---Contact-->
+        <div id="contact">
+          <div class="contrainer">
+            <div class="row">
+              <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i> 1234567890</p>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/mdshakilmahmudsohag"><i class="fa-brands fa-facebook"></i></a>
+                  <a href=""><i class="fa-brands fa-twitter"></i></a>
+                  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+              </div>
+              <div class="contact-right">
+                <form >
+                  <input type="text" name="Name" placeholder="Your Name" required>
+                  <input type="email" name="email" placeholder="Your Email" required>
+                  <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                  <button type="submit">Submit</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+    <script>
+      var tablinks =document.getElementsByClassName("tab-links");
+      var tabcontent =document.getElementsByClassName("tab-contents");
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+      }
+    </script>
+</body>
+</html>
